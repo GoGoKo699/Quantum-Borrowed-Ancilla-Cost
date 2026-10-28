@@ -1,0 +1,32 @@
+# Quantum Borrowed Ancilla Cost
+
+This repository gives exact borrowed-qubit width versus full-channel accuracy for CCZ under excitation-conserving one- and two-qubit gates. Its authoritative scientific account is organized by topic under science/.
+
+## Principal statement
+
+There are three data qubits and m arbitrary borrowed qubits, N=m+3. The ideal operation is CCZ on the data and identity on all borrowed information. Error is half the diamond norm on the entire acted-on register, including arbitrary external references.
+
+For every integer m>=0, the deterministic optimum is sin(pi/[4(m+2)]). The optimum over all input-independent classical mixtures, with the branch record discarded, is its square. With the classical record retained and scored against the same independent coin distribution, the optimum is the deterministic value. One prepared charge-eigenstate helper permits exact CCZ by established synthesis.
+
+## Reading routes
+
+- Story and scope: README.md, science/model.md, science/interpretation.md.
+- Exact theorem, definitions, and integer borrowed-qubit costs: science/model.md.
+- Universal deterministic converse: science/deterministic_bound.md.
+- Explicit sector phases and finite exact reachability: science/construction.md.
+- Universal randomized converse, exact diamond upper, recorded-coin boundary, and charge-invariant witness: science/randomized_optimum.md.
+- Finite examples and a direct six-gate no-borrowed-qubit circuit: science/examples.md.
+- Primary-source attribution and model comparisons: references/RELATED_WORK.md and references/references.bib.
+- Reproduction: verification/README.md, verification/run_all.py, verification/results.json.
+
+## Interpretation rules
+
+The target borrowed identity is approximated as part of the joint channel. Do not describe the positive-error construction as exact return of arbitrary borrowed states. The lower bound includes arbitrary correlations between data, borrowed qubits, and reference.
+
+The native gate alphabet contains arbitrary continuous conserving gates, and finite circuit length is unrestricted. The imported independent special-unitary reachability theorem uses no additional helper. No efficient compiler or gate-count advantage is asserted for the general construction.
+
+The deterministic locality obstruction, sector reachability, initialized helper mechanism, and generic coherent-error cancellation are established ingredients. The result developed here is their exact borrowed-width operational frontier, with an all-mixture converse. Consult the primary-source comparison before making novelty statements.
+
+A fixed-charge promise on the acted-on register removes the obstruction. The full-channel witness can still have fixed total charge jointly with an untouched reference. Do not conflate these domains.
+
+Finite computations verify identities and explicit examples. They do not prove universal optimality, establish literature priority, or certify efficient compilation.
