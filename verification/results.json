@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "scope": "Finite construction and algebra checks; universal optimality and reachability are established by the written proofs and cited theorem.",
+  "numpy_version": "2.3.5",
+  "seed": 20261028,
+  "exact": {
+    "N_range": [
+      3,
+      100
+    ],
+    "sector_phase_identities": 5145,
+    "small_N_phase_rows_in_pi_units": {
+      "3": [
+        "1/8",
+        "-1/8",
+        "1/8",
+        "-1/8"
+      ],
+      "4": [
+        "1/12",
+        "-1/12",
+        "0",
+        "1/12",
+        "-1/12"
+      ],
+      "5": [
+        "1/16",
+        "-1/16",
+        "-3/80",
+        "3/80",
+        "1/16",
+        "-1/16"
+      ],
+      "6": [
+        "1/20",
+        "-1/20",
+        "-1/20",
+        "0",
+        "1/20",
+        "1/20",
+        "-1/20"
+      ],
+      "7": [
+        "1/24",
+        "-1/24",
+        "1/24",
+        "-19/840",
+        "19/840",
+        "-1/24",
+        "1/24",
+        "-1/24"
+      ]
+    },
+    "target_basis_enumeration_N": [
+      3,
+      10
+    ],
+    "zero_borrowed_diagonal_circuit_basis_states": 8
+  },
+  "circuits": {
+    "N_values": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "random_circuits": 24,
+    "pair_gates_per_circuit": 24,
+    "max_character_residual": 3.0058147905533703e-15,
+    "max_unitarity_residual": 2.220446049250313e-15
+  },
+  "randomized_channel": {
+    "input_distributions": 328,
+    "max_upper_bound_excess": 2.42861286636753e-17,
+    "example_errors": [
+      {
+        "m": 0,
+        "deterministic_error": 0.3826834323650898,
+        "randomized_error": 0.14644660940672624
+      },
+      {
+        "m": 1,
+        "deterministic_error": 0.25881904510252074,
+        "randomized_error": 0.06698729810778066
+      },
+      {
+        "m": 2,
+        "deterministic_error": 0.19509032201612825,
+        "randomized_error": 0.03806023374435662
+      },
+      {
+        "m": 3,
+        "deterministic_error": 0.15643446504023087,
+        "randomized_error": 0.024471741852423214
+      },
+      {
+        "m": 4,
+        "deterministic_error": 0.13052619222005157,
+        "randomized_error": 0.01703708685546585
+      },
+      {
+        "m": 5,
+        "deterministic_error": 0.11196447610330786,
+        "randomized_error": 0.012536043909088196
+      },
+      {
+        "m": 9,
+        "deterministic_error": 0.07133918319923234,
+        "randomized_error": 0.005089279059533634
+      },
+      {
+        "m": 17,
+        "deterministic_error": 0.04132497424881321,
+        "randomized_error": 0.0017077534966650747
+      }
+    ]
+  },
+  "resource_counts": [
+    {
+      "epsilon": 0.1,
+      "deterministic_qubits": 6,
+      "randomized_qubits": 1
+    },
+    {
+      "epsilon": 0.01,
+      "deterministic_qubits": 77,
+      "randomized_qubits": 6
+    },
+    {
+      "epsilon": 0.001,
+      "deterministic_qubits": 784,
+      "randomized_qubits": 23
+    },
+    {
+      "epsilon": 0.0001,
+      "deterministic_qubits": 7852,
+      "randomized_qubits": 77
+    }
+  ]
+}
