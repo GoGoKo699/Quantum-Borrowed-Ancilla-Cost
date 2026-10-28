@@ -50,6 +50,14 @@ Start with the [scientific overview](science/README.md) or go directly to the [m
 
 For one-percent error, the optimal borrowed counts are 77 deterministically and six for an averaged randomized channel. These are width costs in the stated exact native-gate model, not total hardware costs.
 
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](learning/WATROUS_BRIDGE.md) points to the relevant sections of the author's available manuscript, translates its notation, and connects channel discrimination to the conserving-gate problem. A complete three-qubit example shows how discarding a classical choice record changes the error.
+
+The [30-milestone map](learning/MILESTONES.md) has **12 background/preliminaries milestones** and **18 narrative/innovation milestones**. It follows the argument from registers, charge sectors, and borrowed information through the determinant obstruction, attaining construction, common-probe converse, and exact randomized law. Each milestone gives an understanding target, earlier dependencies, conceptual connections, and scientific sources.
+
+Start with the [learning route](learning/README.md), use the bridge alongside the map, or follow the direct scientific route above. The [LLM reading guide](llms.txt) maps questions to the authoritative pages.
+
 ## Reproduce the finite checks
 
 With Python 3.11 or later, run from the repository root:

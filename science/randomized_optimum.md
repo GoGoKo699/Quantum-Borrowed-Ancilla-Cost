@@ -17,12 +17,12 @@ Let $`N=m+3\ge 3`$, let $`B`$ be the $`m`$-qubit borrowed register, let $`\mathc
 ```math
 Q=\sum_{j=1}^{N}|1\rangle\langle1|_j,
 \qquad
-T=\operatorname{CCZ}_{123}\otimes I_B,
+T=\mathrm{CCZ}_{123}\otimes I_B,
 \qquad
 a=\frac{\pi}{4(N-1)}.
 ```
 
-The group $`G_N`$ consists of finite products of one-qubit and two-qubit unitary gates, each commuting with the charge on its support. Gates may act on any pair of qubits. The borrowed register has no prescribed initial state, and its correlations with the system or an inaccessible reference are included in the error criterion. We write $`\operatorname{Ad}_U(X)=UXU^\dagger`$.
+The group $`G_N`$ consists of finite products of one-qubit and two-qubit unitary gates, each commuting with the charge on its support. Gates may act on any pair of qubits. The borrowed register has no prescribed initial state, and its correlations with the system or an inaccessible reference are included in the error criterion. We write $`\mathrm{Ad}_U(X)=UXU^\dagger`$.
 
 A randomized implementation chooses $`W\in G_N`$ using a classical probability distribution independent of the quantum input and implements
 
@@ -38,7 +38,7 @@ The optimum is
 ```math
 \delta_{\mathrm{rand}}^*(m)
 =\inf_\mu \frac12
-\left\|\Lambda_\mu-\operatorname{Ad}_T\right\|_\diamond.
+\left\|\Lambda_\mu-\mathrm{Ad}_T\right\|_\diamond.
 ```
 
 Let $`\Pi_k`$ project onto the charge-$`k`$ sector, of dimension $`d_k=\binom Nk`$. For a charge-preserving unitary $`V`$, write $`V_k`$ for its restriction to that sector. We use two facts established in the companion proofs.
@@ -84,14 +84,14 @@ The randomization argument below uses these facts but does not require a bound o
 **Lemma 1.** Let $`F`$ be an $`r`$-dimensional unitary, where $`r\ge5`$, and suppose $`\det F=-1`$. Then
 
 ```math
-\operatorname{Re}\operatorname{Tr}F
+\mathrm{Re}\mathrm{Tr}F
 \le r\cos\!\left(\frac{\pi}{r}\right).
 ```
 
 **Proof.** Write the eigenvalues as $`e^{i\varphi_j}`$. If at least one eigenvalue has nonpositive real part, then
 
 ```math
-\operatorname{Re}\operatorname{Tr}F\le r-1
+\mathrm{Re}\mathrm{Tr}F\le r-1
 <r\cos\!\left(\frac{\pi}{r}\right).
 ```
 
@@ -112,7 +112,7 @@ S:=\sum_{j=1}^{r}\varphi_j=(2\ell+1)\pi
 for an integer $`\ell`$. In particular, $`|S|\ge\pi`$, while $`S/r\in(-\pi/2,\pi/2)`$. Cosine is concave on this interval, even, and decreasing on $`[0,\pi/2]`$. Jensen's inequality therefore gives
 
 ```math
-\frac1r\operatorname{Re}\operatorname{Tr}F
+\frac1r\mathrm{Re}\mathrm{Tr}F
 =\frac1r\sum_{j=1}^{r}\cos\varphi_j
 \le\cos(S/r)
 \le\cos(\pi/r).
@@ -135,11 +135,11 @@ It is normalized because $`d_0=d_N=1`$ and $`d_1=d_{N-1}=N`$. Its definition dep
 **Lemma 2.** Every $`W\in G_N`$ satisfies
 
 ```math
-\left|\operatorname{Tr}(\tau T^\dagger W)\right|
+\left|\mathrm{Tr}(\tau T^\dagger W)\right|
 \le\cos a.
 ```
 
-**Proof.** Put $`E=T^\dagger W`$ and $`z=\operatorname{Tr}(\tau E)`$. A global phase leaves the character unchanged:
+**Proof.** Put $`E=T^\dagger W`$ and $`z=\mathrm{Tr}(\tau E)`$. A global phase leaves the character unchanged:
 
 ```math
 \chi_N(e^{i\gamma}E)
@@ -152,7 +152,7 @@ If $`z\ne0`$, choose $`\widetilde E=e^{-i\arg z}E`$. If $`z=0`$, take $`\widetil
 ```math
 \chi_N(\widetilde E)=-1,
 \qquad
-\operatorname{Tr}(\tau\widetilde E)=|z|.
+\mathrm{Tr}(\tau\widetilde E)=|z|.
 ```
 
 Form the auxiliary matrix
@@ -178,14 +178,14 @@ Moreover, the real part of a trace is unchanged by taking the adjoint. Consequen
 
 ```math
 \begin{aligned}
-\operatorname{Re}\operatorname{Tr}F
-&=\operatorname{Re}\Big[
- \operatorname{Tr}\widetilde E_1
- +\operatorname{Tr}\widetilde E_{N-1}
+\mathrm{Re}\mathrm{Tr}F
+&=\mathrm{Re}\Big[
+ \mathrm{Tr}\widetilde E_1
+ +\mathrm{Tr}\widetilde E_{N-1}
  +(N-2)\big(
- \operatorname{Tr}\widetilde E_0+
- \operatorname{Tr}\widetilde E_N\big)\Big]\\
-&=r\,\operatorname{Re}\operatorname{Tr}(\tau\widetilde E)
+ \mathrm{Tr}\widetilde E_0+
+ \mathrm{Tr}\widetilde E_N\big)\Big]\\
+&=r\,\mathrm{Re}\mathrm{Tr}(\tau\widetilde E)
 =r|z|.
 \end{aligned}
 ```
@@ -210,9 +210,9 @@ For each allowed circuit,
 \begin{aligned}
 \langle\Omega_T|
 (W\otimes I_R)|\Omega_\tau\rangle
-&=\operatorname{Tr}(\tau T^\dagger W),\\
-\operatorname{Tr}\!\left[
-P_T(\operatorname{Ad}_W\otimes\operatorname{id}_R)
+&=\mathrm{Tr}(\tau T^\dagger W),\\
+\mathrm{Tr}\!\left[
+P_T(\mathrm{Ad}_W\otimes\mathrm{id}_R)
 (|\Omega_\tau\rangle\langle\Omega_\tau|)
 \right]
 &\le\cos^2a.
@@ -223,16 +223,16 @@ Thus, for the output
 
 ```math
 \rho_\mu
-=(\Lambda_\mu\otimes\operatorname{id}_R)
+=(\Lambda_\mu\otimes\mathrm{id}_R)
 (|\Omega_\tau\rangle\langle\Omega_\tau|),
 ```
 
 linearity gives
 
 ```math
-\operatorname{Tr}(P_T\rho_\mu)
+\mathrm{Tr}(P_T\rho_\mu)
 =\int_{G_N}
-\left|\operatorname{Tr}(\tau T^\dagger W)\right|^2\,d\mu(W)
+\left|\mathrm{Tr}(\tau T^\dagger W)\right|^2\,d\mu(W)
 \le\cos^2a.
 ```
 
@@ -241,8 +241,8 @@ The same input and the same two-outcome test $`\{P_T,I-P_T\}`$ work for every di
 ```math
 \begin{aligned}
 \frac12\|\rho_\mu-P_T\|_1
-&\ge\operatorname{Tr}[P_T(P_T-\rho_\mu)]\\
-&=1-\operatorname{Tr}(P_T\rho_\mu)
+&\ge\mathrm{Tr}[P_T(P_T-\rho_\mu)]\\
+&=1-\mathrm{Tr}(P_T\rho_\mu)
 \ge\sin^2a.
 \end{aligned}
 ```
@@ -250,7 +250,7 @@ The same input and the same two-outcome test $`\{P_T,I-P_T\}`$ work for every di
 Taking the supremum over inputs in the diamond norm can only increase this value. Therefore every allowed mixture satisfies
 
 ```math
-\frac12\|\Lambda_\mu-\operatorname{Ad}_T\|_\diamond
+\frac12\|\Lambda_\mu-\mathrm{Ad}_T\|_\diamond
 \ge\sin^2a.
 ```
 
@@ -271,13 +271,13 @@ We first prove the channel-norm statement needed for achievability.
 Then
 
 ```math
-\frac12\|\Psi_\Theta-\operatorname{id}\|_\diamond
+\frac12\|\Psi_\Theta-\mathrm{id}\|_\diamond
 \le\sin^2a.
 ```
 
 If both $`-a`$ and $`a`$ occur in the spectrum, equality holds.
 
-**Proof.** It suffices to bound the output trace norm for every normalized pure input with an arbitrary finite-dimensional reference. Convexity then gives the same bound for mixed states. To see why this also controls arbitrary operators in the diamond norm, let $`\Delta=\operatorname{id}-\Psi_\Theta`$. For any operator $`X`$ on the input and a reference, introduce an extra two-dimensional reference factor and form
+**Proof.** It suffices to bound the output trace norm for every normalized pure input with an arbitrary finite-dimensional reference. Convexity then gives the same bound for mixed states. To see why this also controls arbitrary operators in the diamond norm, let $`\Delta=\mathrm{id}-\Psi_\Theta`$. For any operator $`X`$ on the input and a reference, introduce an extra two-dimensional reference factor and form
 
 ```math
 H_X=\frac12
@@ -287,8 +287,8 @@ H_X=\frac12
 The identities $`\|H_X\|_1=\|X\|_1`$ and
 
 ```math
-\|(\Delta\otimes\operatorname{id})(H_X)\|_1
-=\|(\Delta\otimes\operatorname{id})(X)\|_1
+\|(\Delta\otimes\mathrm{id})(H_X)\|_1
+=\|(\Delta\otimes\mathrm{id})(X)\|_1
 ```
 
 follow from the singular values and the fact that $`\Delta`$ preserves adjoints. The positive and negative parts of $`H_X`$ are nonnegative multiples of states, with coefficients summing to $`\|H_X\|_1`$. A uniform bound for states therefore bounds the induced trace norm for arbitrary operators and arbitrary references, which is the diamond norm.
@@ -313,8 +313,8 @@ Omit indices with $`p_i=0`$; they contribute zero rows and columns to the matric
 are orthonormal, even when the reference vectors are not orthogonal. In this basis, the output difference
 
 ```math
-\big[(\operatorname{id}-\Psi_\Theta)
-\otimes\operatorname{id}_R\big]
+\big[(\mathrm{id}-\Psi_\Theta)
+\otimes\mathrm{id}_R\big]
 (|\psi\rangle\langle\psi|)
 ```
 
@@ -323,7 +323,7 @@ is isometrically equivalent to the real symmetric matrix
 ```math
 M(p)=D_p A D_p,
 \qquad
-D_p=\operatorname{diag}(\sqrt{p_i}),
+D_p=\mathrm{diag}(\sqrt{p_i}),
 \qquad
 A_{ij}=1-\cos(\theta_i-\theta_j).
 ```
@@ -367,7 +367,7 @@ Because zero probabilities were omitted and $`v`$ is a nonzero nonnegative vecto
 Since $`|\theta_i|\le a\le\pi/2`$,
 
 ```math
-\operatorname{Re}\sum_iq_i e^{i\theta_i}
+\mathrm{Re}\sum_iq_i e^{i\theta_i}
 =\sum_iq_i\cos\theta_i
 \ge\cos a\ge0.
 ```
@@ -419,18 +419,18 @@ The inverse of every allowed elementary gate is allowed, so both $`W_\star`$ and
 \begin{aligned}
 \Lambda_\star
 &=\frac12\left(
-\operatorname{Ad}_{W_\star}
-+\operatorname{Ad}_{W_\star^\dagger}
+\mathrm{Ad}_{W_\star}
++\mathrm{Ad}_{W_\star^\dagger}
 \right)\\
-&=\operatorname{Ad}_T\circ\Psi_\Theta.
+&=\mathrm{Ad}_T\circ\Psi_\Theta.
 \end{aligned}
 ```
 
 Unitary invariance of the diamond norm and Lemma 3 yield
 
 ```math
-\frac12\|\Lambda_\star-\operatorname{Ad}_T\|_\diamond
-=\frac12\|\Psi_\Theta-\operatorname{id}\|_\diamond
+\frac12\|\Lambda_\star-\mathrm{Ad}_T\|_\diamond
+=\frac12\|\Psi_\Theta-\mathrm{id}\|_\diamond
 =\sin^2a.
 ```
 
@@ -487,7 +487,7 @@ and compare it with the ideal recorded channel using the same coin distribution,
 \frac12\left\|
 |\Omega_j\rangle\langle\Omega_j|-P_T
 \right\|_1
-=\sqrt{1-\left|\operatorname{Tr}(\tau T^\dagger W_j)\right|^2}
+=\sqrt{1-\left|\mathrm{Tr}(\tau T^\dagger W_j)\right|^2}
 \ge\sin a.
 ```
 

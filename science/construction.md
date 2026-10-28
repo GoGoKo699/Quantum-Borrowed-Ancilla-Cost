@@ -6,11 +6,11 @@ The result is
 
 ```math
 \min_{W\in G_N}
-\frac12\left\|\operatorname{Ad}_W-\operatorname{Ad}_T\right\|_\diamond
+\frac12\left\|\mathrm{Ad}_W-\mathrm{Ad}_T\right\|_\diamond
 =
 \sin\!\left(\frac{\pi}{4(N-1)}\right),
 \qquad
-T=\operatorname{CCZ}_{123}\otimes I_B.
+T=\mathrm{CCZ}_{123}\otimes I_B.
 ```
 
 Here $`B`$ denotes the $`m`$-qubit borrowed register. As in the [model](model.md), $`G_N`$ is the group of finite products of arbitrary continuous one- and two-qubit unitaries that each conserve excitation number on their support. No additional qubits are supplied to the construction.
@@ -31,7 +31,7 @@ d_k=\binom Nk.
 
 The synthesis argument uses the following established statement:
 
-> Every unitary $`V=\bigoplus_{k=0}^{N}V_k`$ with $`V_k\in\operatorname{SU}(\mathcal H_k)`$ belongs to $`G_N`$.
+> Every unitary $`V=\bigoplus_{k=0}^{N}V_k`$ with $`V_k\in\mathrm{SU}(\mathcal H_k)`$ belongs to $`G_N`$.
 
 Thus determinant-one transformations can be chosen independently in all charge sectors. In the one-dimensional sectors, determinant one means $`V_0=V_N=1`$.
 
@@ -97,7 +97,7 @@ b_k=\binom{m}{k-3},
 with the convention that a binomial coefficient is zero outside its usual range. Define the wrapping function explicitly by
 
 ```math
-\operatorname{wrap}(x)
+\mathrm{wrap}(x)
 =
 x-2\pi\left\lfloor\frac{x+\pi}{2\pi}\right\rfloor
 \in[-\pi,\pi).
@@ -108,7 +108,7 @@ In particular, the boundary value $`\pi`$ is represented by $`-\pi`$. Now set
 ```math
 \theta_k
 =
-\frac{\operatorname{wrap}\!\left(d_kp(k)-\pi b_k\right)}{d_k},
+\frac{\mathrm{wrap}\!\left(d_kp(k)-\pi b_k\right)}{d_k},
 \qquad
 \Theta=\sum_{k=0}^{N}\theta_k\Pi_k,
 \qquad
@@ -212,9 +212,9 @@ Every listed phase has absolute value at most $`a/\pi=1/[4(N-1)]`$, and both end
 For the constructed circuit, $`T^\dagger W=e^{i\Theta}`$. All its eigenphases lie in $`[-a,a]`$, and both endpoint phases occur. For any density operator $`\rho`$,
 
 ```math
-\operatorname{Re}\operatorname{Tr}(\rho e^{i\Theta})
+\mathrm{Re}\mathrm{Tr}(\rho e^{i\Theta})
 =
-\sum_{k=0}^{N}\operatorname{Tr}(\rho\Pi_k)\cos\theta_k
+\sum_{k=0}^{N}\mathrm{Tr}(\rho\Pi_k)\cos\theta_k
 \geq\cos a.
 ```
 
