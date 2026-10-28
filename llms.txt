@@ -17,7 +17,18 @@ For every integer m>=0, the deterministic optimum is sin(pi/[4(m+2)]). The optim
 - Universal randomized converse, exact diamond upper, recorded-coin boundary, and charge-invariant witness: science/randomized_optimum.md.
 - Finite examples and a direct six-gate no-borrowed-qubit circuit: science/examples.md.
 - Primary-source attribution and model comparisons: references/RELATED_WORK.md and references/references.bib.
+- Study entrypoint and the selected educational anchor: learning/README.md.
+- Common understanding map: learning/MILESTONES.md, exactly M01–M30, with 12 background/preliminaries and 18 narrative/innovation milestones.
+- Watrous section pointers, notation translation, worked circuit, and source-to-project explanation: learning/WATROUS_BRIDGE.md.
 - Reproduction: verification/README.md, verification/run_all.py, verification/results.json.
+
+## Study route
+
+The one educational anchor is John Watrous, The Theory of Quantum Information (2018). Section and statement numbers in the bridge refer to the author's pre-publication manuscript at https://cs.uwaterloo.ca/~watrous/TQI/. Use the relevant sections alongside the project's own explanations.
+
+M01–M12 assemble the physical registers, charge sectors, quantum information, channel distance, classical randomization, imported reachability, and complete optimization model. M13–M21 develop the deterministic converse and attaining construction. M22–M27 connect the common probe and the exact two-branch calculation to the randomized law. M28–M30 integrate the scored-record boundary, charge-invariant witness, resource comparison, attribution, and limitations.
+
+Watrous supplies the channel framework; the symmetry-specific results have their homes in science/ and the cited research papers. The completely bounded trace norm equals the diamond norm, while this project's error includes a factor of one half. Watrous uses unsquared fidelity; target-projector acceptance probabilities use its square.
 
 ## Interpretation rules
 

@@ -11,7 +11,7 @@ n_j=|1\rangle\langle1|_j,
 \qquad
 Q=\sum_{j=1}^{N}n_j,
 \qquad
-T=\operatorname{CCZ}_{123}\otimes I_B.
+T=\mathrm{CCZ}_{123}\otimes I_B.
 ```
 
 Here $`I_B`$ is the identity on the $`m`$-qubit borrowed register $`B`$. Let $`G_N`$ consist of all finite products of one- and two-qubit unitary gates, each of which commutes with the sum of $`n_j`$ on its support. Arbitrary continuous gate parameters and arbitrary pairs of qubits are allowed. Every circuit therefore commutes with $`Q`$.
@@ -21,9 +21,9 @@ For $`W\in G_N`$, define
 ```math
 \delta(W)
 =
-\frac12\left\|\operatorname{Ad}_W-\operatorname{Ad}_T\right\|_\diamond,
+\frac12\left\|\mathrm{Ad}_W-\mathrm{Ad}_T\right\|_\diamond,
 \qquad
-\operatorname{Ad}_U(\rho)=U\rho U^\dagger.
+\mathrm{Ad}_U(\rho)=U\rho U^\dagger.
 ```
 
 The channel comparison acts on the complete $`N`$-qubit register. It covers arbitrary borrowed inputs, correlations with the data, and entanglement with an untouched reference. The identity on the borrowed register is part of the target operation. At positive error, restoration is approximate in this joint sense. See the [model](model.md) for the full operational contract.
@@ -150,14 +150,14 @@ For two unitary channels, their half-diamond distance can be expressed through t
 =
 \sqrt{1-\nu(E)^2},
 \qquad
-\nu(E)=\min_{\rho}\left|\operatorname{Tr}(\rho E)\right|
+\nu(E)=\min_{\rho}\left|\mathrm{Tr}(\rho E)\right|
 =
-\operatorname{dist}\!\left(
-0,\operatorname{conv}(\operatorname{spec}E)
+\mathrm{dist}\!\left(
+0,\mathrm{conv}(\mathrm{spec}E)
 \right).
 ```
 
-Here the minimum ranges over density operators on the acted-on register. To see the first equality, purify an arbitrary input $`\rho`$ to $`|\Psi\rangle`$. The two unitary outputs are pure, their overlap is $`\langle\Psi|(E\otimes I)|\Psi\rangle=\operatorname{Tr}(\rho E)`$, and their half-trace distance is the square root in the formula. Purification cannot reduce distinguishability, because tracing out the purifying system is a channel. It therefore suffices to optimize over these pure joint inputs. For the second equality, diagonalize $`E`$: the diagonal entries of $`\rho`$ in this basis are an arbitrary probability distribution on its eigenvalues.
+Here the minimum ranges over density operators on the acted-on register. To see the first equality, purify an arbitrary input $`\rho`$ to $`|\Psi\rangle`$. The two unitary outputs are pure, their overlap is $`\langle\Psi|(E\otimes I)|\Psi\rangle=\mathrm{Tr}(\rho E)`$, and their half-trace distance is the square root in the formula. Purification cannot reduce distinguishability, because tracing out the purifying system is a channel. It therefore suffices to optimize over these pure joint inputs. For the second equality, diagonalize $`E`$: the diagonal entries of $`\rho`$ in this basis are an arbitrary probability distribution on its eigenvalues.
 
 If $`\delta(W)=1`$, the claimed lower bound already holds. Suppose instead that $`\delta(W)<1`$. Then the origin lies outside the convex hull of the eigenvalues, so they lie in an open semicircle. Let $`2\alpha<\pi`$ be the length of their shortest containing arc. After multiplying $`E`$ by a global phase, all its eigenvalues have the form $`e^{i\varphi}`$ with $`\varphi\in[-\alpha,\alpha]`$, and both endpoints of this shortest arc occur.
 
